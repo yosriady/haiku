@@ -1,0 +1,2 @@
+defmodule Haiku do
+end
