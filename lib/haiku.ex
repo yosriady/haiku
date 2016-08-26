@@ -18,10 +18,12 @@ defmodule Haiku do
         format: [delimiter, adjective, noun, number].
     """
 
-    @delimiter Application.get_env(:haiku, :delimiter)
-    @range Application.get_env(:haiku, :range)
-    @adjectives Application.get_env(:haiku, :adjectives)
-    @nouns Application.get_env(:haiku, :nouns)
+    alias Haiku.Config
+
+    @delimiter Application.get_env(:haiku, :delimiter) || Config.delimiter
+    @range Application.get_env(:haiku, :range) || Config.range
+    @adjectives Application.get_env(:haiku, :adjectives)  || Config.adjectives
+    @nouns Application.get_env(:haiku, :nouns)  || Config.nouns
     @reducer_module Application.get_env(:haiku, :reducer_module)
     @reducer_function Application.get_env(:haiku, :reducer_function)
 
