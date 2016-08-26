@@ -14,8 +14,7 @@ defmodule Haiku do
             reducer_module: Haiku.Custom
             reducer_function: :custom_reduce
 
-        Note that reducer_function receives a list of args with the
-        format: [delimiter, adjective, noun, number].
+        Note that `reducer_function/4` has 4-arity and expects the following order: [delimiter, adjective, noun, number].
     """
 
     alias Haiku.Config
