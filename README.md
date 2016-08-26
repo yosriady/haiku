@@ -39,11 +39,19 @@ config :haiku,
         range: 9999,
         adjectives: ~w(autumn hidden bitter misty),
         nouns: ~w(meadow sun glade bird)
-        reducer_module: Haiku.Custom
+        reducer_module: MyModule
         reducer_function: :custom_reduce
 ```
 
-> Note that `reducer_function` receives a list of `args` with the format: `[delimiter, adjective, noun, number]`.
+> Note that `reducer_function/4` must be public and has 4-arity, receiving a list of `args` with the following order: `[delimiter, adjective, noun, number]`, and must return a string.
+> For example:
+>
+>
+> ```
+> def custom_reduce(delimiter, adjective, noun, number) do
+>  "Poop"
+> end
+> ```
 
 ## Thanks
 
