@@ -9,7 +9,7 @@ Add `haiku` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:haiku, "~> 0.2.0"}]
+  [{:haiku, "~> 0.3.0"}]
 end
 ```
 
@@ -37,8 +37,8 @@ In your `config.exs`:
 config :haiku,
         delimiter: '.',
         range: 9999,
-        adjectives: ~w(autumn hidden bitter misty},
-        nouns: ~w(meadow sun glade bird}
+        adjectives: ~w(autumn hidden bitter misty),
+        nouns: ~w(meadow sun glade bird)
         reducer_module: Haiku.Custom
         reducer_function: :custom_reduce
 ```

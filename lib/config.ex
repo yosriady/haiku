@@ -4,15 +4,15 @@ defmodule Haiku.Config do
     """
 
     def delimiter do
-        '-'
+        Application.get_env(:haiku, :delimiter) || '-'
     end
 
     def range do
-        9999
+        Application.get_env(:haiku, :range) || 9999
     end
 
     def nouns do
-        ~w(
+        Application.get_env(:haiku, :adjectives) || ~w(
         waterfall river breeze moon rain wind sea morning
         snow lake sunset pine shadow leaf dawn glitter forest
         hill cloud meadow sun glade bird brook butterfly
@@ -25,7 +25,7 @@ defmodule Haiku.Config do
     end
 
     def adjectives do
-        ~w(
+        Application.get_env(:haiku, :nouns) || ~w(
         autumn hidden bitter misty silent empty dry dark summer
         icy delicate quiet white cool spring winter patient
         twilight dawn crimson wispy weathered blue billowing
@@ -35,5 +35,13 @@ defmodule Haiku.Config do
         young holy solitary fragrant aged snowy proud floral
         restless divine polished ancient purple lively nameless
         )
+    end
+
+    def reducer_module do
+        Application.get_env(:haiku, :reducer_module)
+    end
+
+    def reducer_function do
+        Application.get_env(:haiku, :reducer_function)
     end
 end
