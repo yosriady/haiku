@@ -48,7 +48,7 @@ config :haiku,
 >
 > ```
 > def custom_reduce(delimiter, adjective, noun, number) do
->  "Poop"
+>  "#{number}#{if number, do: delimiter}#{adjective}#{noun}""
 > end
 > ```
 
