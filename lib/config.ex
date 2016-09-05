@@ -12,7 +12,7 @@ defmodule Haiku.Config do
     end
 
     def nouns do
-        Application.get_env(:haiku, :adjectives) || ~w(
+        Application.get_env(:haiku, :nouns) || ~w(
         waterfall river breeze moon rain wind sea morning
         snow lake sunset pine shadow leaf dawn glitter forest
         hill cloud meadow sun glade bird brook butterfly
@@ -25,7 +25,7 @@ defmodule Haiku.Config do
     end
 
     def adjectives do
-        Application.get_env(:haiku, :nouns) || ~w(
+        Application.get_env(:haiku, :adjectives) || ~w(
         autumn hidden bitter misty silent empty dry dark summer
         icy delicate quiet white cool spring winter patient
         twilight dawn crimson wispy weathered blue billowing
