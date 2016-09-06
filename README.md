@@ -9,7 +9,7 @@ Add `haiku` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:haiku, "~> 0.3.0"}]
+  [{:haiku, "~> 0.3.1"}]
 end
 ```
 
